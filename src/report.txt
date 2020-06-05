@@ -1,0 +1,53 @@
+@author: Raisa Hossain
+Assignment: Lab 06 Three Degrees of Kevin Bacon
+File: report.txt
+Test cases for ThreeDegrees.java main function:
+
+1. Check what happens when two strings of the same value are entered:
+expectation: distanceTo = 0, print output: "Silly! They are in their own movie!"
+    i)filename : mymovies.txt
+    ii)actor names: vertex 1= Kevin Bacon, vertex 2= Kevin Bacon
+    iii)actual output: "Silly! They are in their own movie!"
+
+2. Check what happens if either the first or second name is the empty string
+expectation: (the user hit enter giving no name), then the program should end
+    i)filename : mymovies.txt
+    ii)actor names: vertex 1= "", vertex 2= Kevin Bacon
+    iii)actual output: Process finished with exit code 0
+
+3. Check what happens If either name is not found in the graph,
+expectation: the program should print a message to that effect, and
+request two new names for the next search.
+    i)filename : mymovies.txt
+    ii)actor names:vertex 1= Joe, vertex 2= Kevin Bacon
+    iii)actual output: Joe is not known in the moviefiles/movies-0.txt
+                       Enter first actor's name (two case-senstive words):
+
+4.Check for short distance (<= 3) paths
+expectation: normal operation
+    i)filename : mymovies.txt
+    ii)actor names:vertex 1= Tom Cruise, vertex 2= Tom Hanks
+    iii)actual output: Tom Cruise was in AFewGoodMen
+                       with Kevin Bacon who was in Apollo13
+                       with Tom Hanks.
+
+5.Check for long distance ( > 3) paths
+expectation: distanceTo > 3; chain exceeds max length of 3
+    i)filename : mymovies.txt
+    ii)actor names:vertex 1= Ian McKellen, vertex 2= John Cusack
+    iii)actual output: No path less than or equal to a 3-hop distance exists between Ian McKellen and John Cusack
+                       Enter first actor's name (two case-senstive words):
+
+6. Check for max distance (==3) paths
+expectation: normal operation
+    i)filename : mymovies.txt
+    ii)actor names:vertex 1= Josh Brolin, vertex 2= Ian McKellen
+    iii)actual output: Josh Brolin was in HollowMan
+                       with Kevin Bacon who was in Apollo13
+                       with Tom Hanks who was in DaVinciCode
+                       with Ian McKellen.
+
+
+
+
+
